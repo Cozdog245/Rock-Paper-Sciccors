@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Page Title</title>
+</head>
+<body>
+  <script>
+
+function getComputerChoice(){
+  let computerChoice = Math.floor(Math.random()*(3-0)+0)
+
+  if(computerChoice == 0){
+    console.log("rock")
+    return computerChoice
+  } else if(computerChoice == 1){
+    console.log("paper")
+  } else if(computerChoice == 2){
+    console.log("scissors")
+  }
+}
+
+function getHumanChoice(){
+  let humanChoice = prompt("rock paper or siccors")
+
+  const rock = 0
+  const paper = 1
+  const sciccors = 2
+
+  if (humanChoice == "rock"){
+    console.log("rock")
+    return rock
+  } else if( humanChoice == "paper"){
+    console.log("paper")
+    return paper
+  }else if (humanChoice == "siccors"){
+    console.log("siccors")
+    return sciccors
+  }
+}
+
+if(getComputerChoice()==0 && getHumanChoice() ==0){
+  console.log("draw") 
+}
+
+  </script>
+</body>
+</html>
