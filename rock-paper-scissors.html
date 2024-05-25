@@ -11,37 +11,62 @@ function getComputerChoice(){
   let computerChoice = Math.floor(Math.random()*(3-0)+0)
 
   if(computerChoice == 0){
-    console.log("rock")
+    console.log("computer chose rock")
     return computerChoice
   } else if(computerChoice == 1){
-    console.log("paper")
+    console.log("computer chose paper")
+    return computerChoice
   } else if(computerChoice == 2){
-    console.log("scissors")
+    console.log("computer chose scissors")
+    return computerChoice
   }
 }
 
 function getHumanChoice(){
-  let humanChoice = prompt("rock paper or siccors")
+  let humanChoice = prompt("rock paper or siccors").toLowerCase()
+
 
   const rock = 0
   const paper = 1
-  const sciccors = 2
+  const scissors = 2
 
   if (humanChoice == "rock"){
-    console.log("rock") 
+    console.log("you chose rock") 
     return rock
   } else if( humanChoice == "paper"){
-    console.log("paper")
+    console.log("you chose paper")
     return paper
-  }else if (humanChoice == "siccors"){
-    console.log("siccors")
-    return sciccors
+  }else if (humanChoice == "scissors"){
+    console.log("you chose scissors")
+    return scissors
   }
 }
 
-if(getComputerChoice()==0 && getHumanChoice() ==0){
-  console.log("draw") 
+let humanScore = 0
+let computerScore = 0
+
+function playRound(humanChoice , computerChoice){
+
+  if(humanChoice === 0 && computerChoice === 2){
+    console.log("you win")
+  }
+  else if(humanChoice === 1 && computerChoice === 0){
+    console.log("you win")
+  }
+  else if(humanChoice === 2 && computerChoice === 1){
+    console.log("you win")
+  }
+  else if (humanChoice === computerChoice){
+    console.log("Draw")
+  }else{console.log("you loose")}
+
 }
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+playRound(humanSelection , computerSelection)
+
 
   </script>
 </body>
