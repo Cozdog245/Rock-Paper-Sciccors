@@ -48,17 +48,27 @@ let computerScore = 0
 function playRound(humanChoice , computerChoice){
 
   if(humanChoice === 0 && computerChoice === 2){
+    humanScore ++
     console.log("you win")
   }
   else if(humanChoice === 1 && computerChoice === 0){
+    humanScore ++
     console.log("you win")
+    
   }
   else if(humanChoice === 2 && computerChoice === 1){
+  humanScore ++
     console.log("you win")
+    
   }
   else if (humanChoice === computerChoice){
     console.log("Draw")
-  }else{console.log("you loose")}
+    
+  }else{console.log("you loose")
+        computerScore ++
+  }
+
+  
 
 }
 
@@ -66,6 +76,13 @@ const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
 playRound(humanSelection , computerSelection)
+console.log ("Human Score = " , humanScore)
+console.log ("Computer Score =" , computerScore)
+
+
+
+
+
 
 
   </script>
