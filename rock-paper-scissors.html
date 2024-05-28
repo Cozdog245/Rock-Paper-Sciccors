@@ -23,7 +23,7 @@ function getComputerChoice(){
 }
 
 function getHumanChoice(){
-  let humanChoice = prompt("rock paper or siccors").toLowerCase()
+  let humanChoice = prompt("rock paper or scissors").toLowerCase()
 
 
   const rock = 0
@@ -73,34 +73,42 @@ let computerSelection = getComputerChoice();
 playRound(humanSelection , computerSelection)
 console.log ("Human Score = " , humanScore)
 console.log ("Computer Score =" , computerScore)
+console.log (" ")
 
 humanSelection = getHumanChoice();
 computerSelection = getComputerChoice();
 playRound(humanSelection , computerSelection)
 console.log ("Human Score = " , humanScore)
 console.log ("Computer Score =" , computerScore)
+console.log (" ")
 
 humanSelection = getHumanChoice();
 computerSelection = getComputerChoice();
 playRound(humanSelection , computerSelection)
 console.log ("Human Score = " , humanScore)
 console.log ("Computer Score =" , computerScore)
+console.log (" ")
 
 humanSelection = getHumanChoice();
 computerSelection = getComputerChoice();
 playRound(humanSelection , computerSelection)
 console.log ("Human Score = " , humanScore)
 console.log ("Computer Score =" , computerScore)
+console.log (" ")
 
 humanSelection = getHumanChoice();
 computerSelection = getComputerChoice();
 playRound(humanSelection , computerSelection)
 console.log ("Human Score = " , humanScore)
 console.log ("Computer Score =" , computerScore)
+console.log (" ")
 
 if(humanScore > computerScore){
-  console.log("Human WINS!")
-}else{console.log("Oh No Computer Wins :(")}
+  console.log("HUMAN WINS!")
+}else if(humanScore === computerScore){
+  console.log("WE HAVE A DRAW!")
+}
+else{console.log("OH NO! COMPUTER WINS :(")}
 
 
 }
